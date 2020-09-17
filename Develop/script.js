@@ -25,14 +25,22 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  
   function generatePassword()
   {
     //Gathering the user Inputs for Password Generation
-    var length = prompt("Enter the length of the password");
+    var length = prompt("choose a length of at least 8 characters and no more than 128 characters");
+    
+    //Making sure the length satisfies the criteria
+    while(length <8 || length>128)
+    {
+      var length = prompt ("Please enter the correct length again");
+    }
     var upperCase = confirm("Do you want to use an upper case character?");
     var lowerCase = confirm("Do you want to use a lower case character?");
     var numeric = confirm("Do you want to use numerics?");
     var specialChar = confirm("Do you want to use special characters?");
+    var userInputs = [upperCase, lowerCase, numeric, specialChar];
 
     //Creating different strings with all possible characters included
     var upperCaseStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -41,27 +49,36 @@ function writePassword() {
     var specialCharStr = "@!#$%^&*()";
     var possibleCases = [upperCaseStr,lowerCaseStr,numericStr, specialCharStr];
     var str1='';
+    var str2='';
+    var totalStr='';
 
-    //Making sure atleast one character of each type is selected for the password string
+   if(!(upperCase === false && lowerCase === false && numeric === false && specialChar === false))
+   {
     for(var i = 0 ; i < possibleCases.length ; i++)
-    {
-       str1 += possibleCases[i].charAt(Math.floor((Math.random()*possibleCases[i].length)));
-    }
-    console.log(str1);
-
-    //Creating remaining length of the password string from all the different strings types
-    var totalStr = upperCaseStr + lowerCaseStr + numericStr + specialCharStr ;
-    var str2 = '';
+        {
+          if(userInputs[i] === true)
+          {
+            str1 += possibleCases[i].charAt(Math.floor((Math.random()*possibleCases[i].length)));
+            totalStr += possibleCases[i];
+          }
+       }  
     for(var j =0; j<length-str1.length; j++)
-    {
-       str2 +=  totalStr.charAt(Math.floor((Math.random()*totalStr.length)));
-    }
-    console.log(str2);
+        {
+          str2 +=  totalStr.charAt(Math.floor((Math.random()*totalStr.length)));
+          
+        }  
+   }
+   else
+   {
+     alert("Please choose atleast one type of character to form the password string");
+     location.reload();
+   }
 
-    //printing the password string by concatinating str1 and str2
-    console.log(str1+str2);
-  }
-  passwordText.value = password;
+      return str1+str2;
+    }
+  
+passwordText.value = password;
+  
 }
 
 // Add event listener to generate button
