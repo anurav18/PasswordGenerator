@@ -30,7 +30,7 @@ function writePassword() {
   {
     //Gathering the user Inputs for Password Generation
     var length = prompt("choose a length of at least 8 characters and no more than 128 characters");
-    
+
     //Making sure the length satisfies the criteria
     while(length <8 || length>128)
     {
