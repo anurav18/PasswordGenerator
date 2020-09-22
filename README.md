@@ -12,11 +12,33 @@ The main goal of this project is to create a random password generator using dif
 * Each of the selection has to be registered and then the password should be generated.
 * The generated password should have atleast one letter which is in the selected character type criteria.
 
-## Logic behind the Program
+## Logic Involved
 
-The critical part of the program is to have atleast one letter from the selected types of characters. In order to achieve this , there are two strings declared with names str1 , str 2. str1 has each word selected from each type of character selected, str2 has the random string with all the types of characters included in it.
+The critical part of the program is to have atleast one letter from the selected types of characters. In order to achieve this , there are two strings declared with names str1 , str 2. str1 has each word selected from each type of character selected, str2 has the random string with all the types of characters included in it. If the entered password string is less than 8 or greater than 128 characters, the page would alert to enter the length of password string again.
 
 The generated password will be displayed in the textbox
+
+## Password Generation
+
+* Enter the length of the password
+
+![length screenshot](Assets/length.png)
+
+* Enter if you want Upper Case letters in your password string
+
+![upper case screenshot](Assets/UpperCase.png)
+
+* Enter if you want Lower Case Letters in your password string
+
+![lower case screenshot](Assets/LowerCase.png)
+
+* Enter if you want numerics in your password string
+
+![Numerics screenshot](Assets/Numerics.png)
+
+* Enter if you want special characters in your password string.
+
+![Numerics screenshot](Assets/SpecialCharacters.png)
 
 ## Installation
 
