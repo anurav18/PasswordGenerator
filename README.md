@@ -12,6 +12,11 @@ The main goal of this project is to create a random password generator using dif
 * Each of the selection has to be registered and then the password should be generated.
 * The generated password should have atleast one letter which is in the selected character type criteria.
 
+## Logic behind the Program
+
+The critical part of the program is to have atleast one letter from the selected types of characters. In order to achieve this , there are two strings declared with names str1 , str 2. str1 has each word selected from each type of character selected, str2 has the random string with all the types of characters included in it.
+
+The generated password will be displayed in the textbox
 
 ## Installation
 
