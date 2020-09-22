@@ -42,7 +42,7 @@ The generated password will be displayed in the textbox
 
 * Password string is generated based on the selected criteria including atleast one letter for the each type of character selected
 
-![Password Generated](Assets/GeneratedPassword)
+![Password Generated](Assets/GeneratedPassword.png)
 
 ## Installation
 
