@@ -40,6 +40,10 @@ The generated password will be displayed in the textbox
 
 ![Numerics screenshot](Assets/SpecialCharacters.png)
 
+* Password string is generated based on the selected criteria including atleast one letter for the each type of character selected
+
+![Password Generated](Assets/GeneratedPassword)
+
 ## Installation
 
 You can install this project on your local machine by cloning the project using SSH Key by clicking [Here!](git@github.com:anurav18/PasswordGenerator.git)
