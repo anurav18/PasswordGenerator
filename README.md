@@ -52,6 +52,7 @@ The code developed uses HTML and CSS to customize the UI and JavaScript is used 
 ## Installation
 
 You can install this project on your local machine by cloning the project using SSH Key by clicking [Here!](git@github.com:anurav18/PasswordGenerator.git)
+You can Generate a random password by Clicking [Here!](https://anurav18.github.io/PasswordGenerator/)
 
 ## License
 
