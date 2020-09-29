@@ -20,6 +20,11 @@ The generated password will be displayed in the textbox
 
 ## Password Generation
 
+## Overview
+The code developed uses HTML and CSS to customize the UI and JavaScript is used for handling different events involved in the password generation. The password is created randomly based on the different user criteria entered by answering the prompts 
+
+## Series of Events while generating a passowrd
+
 * Enter the length of the password
 
 ![length screenshot](Assets/length.png)
